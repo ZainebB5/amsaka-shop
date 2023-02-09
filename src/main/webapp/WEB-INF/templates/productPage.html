@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1 th:text="${session.loggedInUserName}" th:unless="${session==null}"></h1>
+
+<div th:each="product:${products}">
+    <p th:text="${product.title}"></p>
+    <p th:text="${product.brand}"></p>
+    <p th:text="${product.price}"></p>
+    <p th:text="${product.imageLocation}"></p>
+    <img th:src="@{/images/{toyImage} (toyImage=${product.imageLocation})}">
+    <!--<img th:src="@{../../../../../images/{toyImage} (toyImage=${product.imageLocation})}">-->
+
+    <hr>
+
+</div>
+
+</body>
+</html>
