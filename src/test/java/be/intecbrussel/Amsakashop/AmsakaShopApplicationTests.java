@@ -1,12 +1,14 @@
 package be.intecbrussel.Amsakashop;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-//@SpringBootTest
+
+@SpringBootTest
 class AmsakaShopApplicationTests {
 
-//	@Test
+//@Test
 	void contextLoads() {
 	}
 

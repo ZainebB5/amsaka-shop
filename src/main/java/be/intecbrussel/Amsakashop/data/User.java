@@ -1,17 +1,20 @@
 package be.intecbrussel.Amsakashop.data;
 
-import jakarta.persistence.*;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
-public class User {
+public class
+User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String userName;
     private String mail;
-    private String passWord;
+    private String password;
     private String adress;
     private String num;
     private String town;
@@ -25,12 +28,12 @@ public class User {
 
     public User(String mail, String passWord) {
         this.mail = mail;
-        this.passWord = passWord;
+        this.password = passWord;
     }
 
     public User(String mail, String passWord, String role) {
         this.mail = mail;
-        this.passWord = passWord;
+        this.password = passWord;
         this.role = role;
     }
 
@@ -51,11 +54,11 @@ public class User {
     }
 
     public String getPassWord() {
-        return passWord;
+        return password;
     }
 
     public void setPassWord(String passWord) {
-        this.passWord = passWord;
+        this.password = passWord;
     }
 
     public String getAdress() {
@@ -120,7 +123,7 @@ public class User {
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", mail='" + mail + '\'' +
-                ", passWord='" + passWord + '\'' +
+                ", passWord='" + password + '\'' +
                 '}';
     }
 }

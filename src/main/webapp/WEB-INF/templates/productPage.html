@@ -10,7 +10,6 @@
 
 <div th:each="product:${products}">
     <p th:text="${product.title}"></p>
-    <p th:text="${product.brand}"></p>
     <p th:text="${product.price}"></p>
     <p th:text="${product.imageLocation}"></p>
     <img th:src="@{/images/{toyImage} (toyImage=${product.imageLocation})}">

@@ -9,7 +9,7 @@ import be.intecbrussel.Amsakashop.data.User;
 @Repository
 public interface UserRepository  extends JpaRepository<User, Integer>{
 
-    User findByByMailAndPassWord(String userName, String passWord);
+    User findByMailAndPassword(String mail, String passWord);
     User findByMail(String username);
-
+    
 }
