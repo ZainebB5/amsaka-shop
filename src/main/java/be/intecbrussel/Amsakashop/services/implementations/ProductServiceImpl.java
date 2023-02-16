@@ -7,6 +7,7 @@ import be.intecbrussel.Amsakashop.services.interfaces.UserService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductServiceImpl implements ProductService {
@@ -18,14 +19,23 @@ public class ProductServiceImpl implements ProductService {
     }
 
     @Override
-    public Product getProductById(int id) {
-
-        return productRepository.getOne(id);
+    public List<Product> getAllProduct() {
+        return productRepository.findAll();
     }
 
     @Override
-    public List<Product> getAllProducts() {
-        return productRepository.findAll();
+    public Optional<Product> getProductById(int id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public void addProduct(Product product) {
+
+    }
+
+    @Override
+    public void removeProductById(int id) {
+
     }
 
 

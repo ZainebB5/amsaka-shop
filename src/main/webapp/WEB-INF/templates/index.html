@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -17,7 +17,7 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
+                <a class="navbar-brand" href="#!">test connection</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
@@ -28,8 +28,9 @@
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="#!">All Products</a></li>
                                 <li><hr class="dropdown-divider" /></li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="#!">Category 1</a></li>
+                                <li><a class="dropdown-item" href="#!">Category 2</a></li>
+                                <li><a class="dropdown-item" href="#!">Category 3</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -40,6 +41,12 @@
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                         </button>
                     </form>
+                    <li class="nav-item active">
+                        <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/login}" href="#">login</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" sec:authorize="isAuthenticated()" th:href="@{/logout}" href="#">logout</a>
+                    </li>
                 </div>
             </div>
         </nav>
@@ -47,7 +54,7 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop in style</h1>
+                    <h1 class="display-4 fw-bolder">Amsaka Shop</h1>
                     <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
                 </div>
             </div>

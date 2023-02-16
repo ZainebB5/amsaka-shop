@@ -15,10 +15,10 @@ public class UserSecurity implements UserDetailsService {
     private UserRepository userRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String mail) throws UsernameNotFoundException {
-        User dbUser = userRepository.findByMail(mail);
+    public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {
+        User dbUser = userRepository.findByUserName(userName);
         if (dbUser == null){
-            throw new UsernameNotFoundException("This mail : "+ mail+" does not exist");
+            throw new UsernameNotFoundException("This account : "+ userName +" does not exist");
         }
         return new  org.springframework.security.core.userdetails.User(
                 dbUser.getUserName(),
