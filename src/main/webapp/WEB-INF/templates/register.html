@@ -23,18 +23,20 @@
         <label for="lastName">Last Name</label>
         <input type="text" name="userName" id="lastName" required placeholder="Your Lastname" class="form-control form-control-lg">
       </div>
+
       <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control form-control-lg" required minlength="6" placeholder="Email" name="mail" id="email"
-               aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with
-          anyone else.</small>
+        <label for="password">password</label>
+        <input type="password" class="form-control form-control-lg"  placeholder="password" name="password" id="password">
+
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control form-control-lg" required placeholder="Password" name="password"
-               id="password">
-      </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control form-control-lg" required minlength="6" placeholder="Email" name="mail" id="email"
+                   aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with
+                anyone else.</small>
+        </div>
+
 
       <input type="submit" value="Register" class="btn btn-primary btn-block">
       <span style="margin-top: 10px">Already have an account <a class="linkControl" href="./login.html"
@@ -46,7 +48,7 @@
 
 
 
-<form th:action="@{/register}" th:object="${user}" method="post">
+<!--<form th:action="@{/register}" th:object="${user}" method="post">
 
   <input type="text" name="userName"><br>
   <input type="text" name="mail"><br>
@@ -59,7 +61,7 @@
   <input type="submit" value="Log in">
 
 
-</form>
+</form>-->
 
 </body>
 </html>
